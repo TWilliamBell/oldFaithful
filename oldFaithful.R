@@ -60,7 +60,7 @@ wranglingOldFaithful <- cbind(duration, delta)
 colnames(wranglingOldFaithful) <- c("Eruption Length (min)", "Wait Time since Previous Eruption (min)")
 
 
-pdf("oldFaithful.pdf")
+pdf("./DataVis/oldFaithful.pdf")
 
 plot(wranglingOldFaithful, main = "Old Faithful Eruption Data")
 
@@ -68,7 +68,7 @@ dev.off()
 
 outliersRemoved <- wranglingOldFaithful[wranglingOldFaithful[ , 1] < 6, ]
 
-pdf("oldFaithfulOutliersRemoved.pdf")
+pdf("./DataVis/oldFaithfulOutliersRemoved.pdf")
 
 plot(outliersRemoved[ , 1], jitter(outliersRemoved[ , 2]), main = "Old Faithful Eruption Data w/o Outliers", xlab = "Eruption Length (min)", ylab = "Wait Time since Previous Eruption (min)")
 
